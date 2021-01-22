@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import "./App.css";
+import "./Responsive.css";
+import Projects from "./Components/Projects.js";
+import About from "./Components/About.js";
+import Articles from "./Components/Articles.js";
+import Footer from "./Components/Footer.js";
+import AOS from "aos";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentMount() {
+    window.scrollTo(0, 0);
+
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
+  render() {
+    AOS.init();
+
+    return (
+      <BrowserRouter>
+        <Route exact path="/" component={Projects} />
+        <Route path="/articles" component={Articles} />
+        <Route path="/about" component={About} />
+        <Footer />
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
