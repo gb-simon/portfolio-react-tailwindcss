@@ -1,316 +1,179 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
-import "../Responsive.css";
-import articleone from "../assets/article-tn-01.png";
-import articletwo from "../assets/article-tn-02.png";
-import articlethree from "../assets/article-tn-03.png";
-import articlefour from "../assets/article-tn-04.png";
-import articlefive from "../assets/article-tn-05.png";
 
 class Articles extends Component {
-  state = {
-    articleOneImage: articleone,
-    articleTwoImage: articletwo,
-    articleThreeImage: articlethree,
-    articlefourImage: articlefour,
-    articlefiveImage: articlefive,
-    hamburgerState: "off",
-  };
-
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
-
-  toggleMenu = () => {
-    let hamburger = document.querySelector(".hamburger");
-    let overlay = document.querySelector(".overlay");
-    if (this.state.hamburgerState === "off") {
-      hamburger.classList.add("is-active");
-      overlay.classList.remove("hide");
-      overlay.classList.add("show");
-      this.setState({ hamburgerState: "on" });
-    } else {
-      hamburger.classList.remove("is-active");
-      overlay.classList.remove("show");
-      overlay.classList.add("hide");
-      this.setState({ hamburgerState: "off" });
-    }
-  };
-
   render() {
     return (
-      <div className="body">
-        <section className="header">
-          <div className="navigation">
-            <div className="anne">
-              <Link to="/" className="active">
-                Gonzalo Simon
-              </Link>
+      <div>
+        <div className="hero container max-w-screen-lg mx-auto pb-10">
+          <h1 className="mt-16">My Blog</h1>
+          <a href="https://gonzalosimon.hashnode.dev">I have a blog</a> where I
+          like writing articles <br />
+          about my projects and how I think my challenges .{" "}
+        </div>
+        <div className="container my-12 mx-auto px-4 md:px-12">
+          <div className="flex flex-wrap -mx-1 lg:-mx-4">
+            {/* <!-- 1 Article --> */}
+
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/portfolio-websites">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611512746691/HyhkHLk7T.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">Portfolio Website</h1>
+                </header>
+              </section>
             </div>
-            <button
-              className="hamburger hamburger--spin mobile"
-              type="button"
-              onClick={this.toggleMenu}
-            >
-              <span className="hamburger-box">
-                <span className="hamburger-inner"></span>
-              </span>
-            </button>
-            <div className="overlay mobile">
-              <div className="submenus">
-                <div className="work-mobile">
-                  <Link to="/">Work</Link>
-                </div>
-                <div className="articles-mobile">
-                  <Link to="/articles" className="active">
-                    Articles
-                  </Link>
-                </div>
-                <div className="about-mobile">
-                  <Link to="/about">About</Link>
-                </div>
-              </div>
+            {/* <!-- 8 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <article className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/how-i-got-started-coding">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1610313255132/s8M61xLX6.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    How I got Started Coding
+                  </h1>
+                </header>
+              </article>
             </div>
-            <div className="navigation-sub">
-              <div className="work">
-                <Link to="/">Work</Link>
-              </div>
-              <div className="articles">
-                <Link to="/articles" className="active">
-                  Articles
-                </Link>
-              </div>
-              <div className="about">
-                <Link to="/about">About</Link>
-              </div>
+
+            {/* <!-- 7 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/to-do-app-with-react-and-redux-job-interview-challenge-1">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1609844786265/BBTtjYVl0.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    Job Interview Challenge
+                  </h1>
+                </header>
+              </section>
             </div>
+
+            {/* <!-- 6 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/wikipedia-viewer-with-react">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1609996942139/QVAjdTfKS.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    Wikipedia Viewer with React
+                  </h1>
+                </header>
+              </section>
+            </div>
+
+            {/* <!-- 5 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/javascript-algorithm-challenge-job-interview-challenge">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1610242414753/UxG8q0GO_.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    Job Interview Challenge
+                  </h1>
+                </header>
+              </section>
+            </div>
+
+            {/* <!-- 4 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/five-projects-with-javascript">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1610762829970/f1MLLtcdO.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    Five Projects With JavaScript
+                  </h1>
+                </header>
+              </section>
+            </div>
+
+            {/* <!-- 3 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/five-useful-github-repositories">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1610850904652/7J7nVvu8I.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">
+                    Five Useful GitHub Repositories
+                  </h1>
+                </header>
+              </section>
+            </div>
+
+            {/* <!-- 2 Article --> */}
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <section className="overflow-hidden rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/useful-info-about-freelancing">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611416734784/kjzINnstw.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+                </a>
+                <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                  <h1 className="text-black text-lg">About Freelancing</h1>
+                </header>
+              </section>
+            </div>
+            {/* <!-- 1 Article --> */}
+
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+              <article className="rounded-lg shadow-lg">
+                <a href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-1">
+                  <img
+                    alt="Placeholder"
+                    className="h-auto w-full"
+                    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1608717215089/6CdPYbAHq.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
+                  />
+
+                  <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                    <h1 className="text-black text-lg">
+                      Football Game - JavaScript
+                    </h1>
+                  </header>
+                </a>
+              </article>
+            </div>
+            {/* End */}
           </div>
-          <div className="designer">JavaScript Developer</div>
-          <div className="speciality">MERN Developer</div>
-        </section>
-        <section className="articles">
-          {window.innerWidth <= 1009 ? (
-            <div className="left">
-              {/* All this articles belong to the estribor side */}
-              <p className="articles-intro">
-                <a
-                  className="link-reference"
-                  href="https://gonzalosimon.hashnode.dev/"
-                >
-                  {" "}
-                  I have a blog{" "}
-                </a>
-                where I like writing articles about my projects where I explain
-                the way I code and how I think my challenges and ideas.{" "}
-              </p>
-              <div>
-                <h1>JavaScript Algorithm Challenge</h1>
-                <h3>Job Interview Challenge</h3>
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/javascript-algorithm-challenge-job-interview-challenge"
-                class="article-default"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="7"
-              >
-                {" "}
-                <img src={this.state.articlefiveImage} alt="nice"></img>
-              </span>
-              </div>
-
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/wikipedia-viewer-with-react"
-                class="article-default"
-                image={this.state.articlefourImage}
-                title={["Wikipedia Viewer", <br />, "w/ React"]}
-                subtitle="[Personal Project]"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="6"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/to-do-app-with-react-and-redux-job-interview-challenge-1"
-                class="article-default"
-                image={this.state.articleTwoImage}
-                title={["To-Do App", <br />, "w/ React & Redux"]}
-                subtitle="[Job Interview Challenge]"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="5"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/how-i-got-started-coding"
-                image={this.state.articleThreeImage}
-                class="article-default"
-                title={["How I got started coding"]}
-                date="2 Jan, 2021"
-                dateClass="article-date two-line"
-                index="4"
-              />
-            </div>
-          ) : (
-            <div className="left">
-              {/* All this articles belong to the babor side */}
-
-              <p className="articles-intro">
-                <a
-                  className="link-reference"
-                  href="https://gonzalosimon.hashnode.dev/"
-                >
-                  {" "}
-                  I have a blog{" "}
-                </a>
-                where I like writing articles about my projects where I explain
-                the way I code and how I think my challenges and ideas.{" "}
-              </p>
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/wikipedia-viewer-with-react"
-                class="article-default"
-                image={this.state.articlefourImage}
-                title={["Wikipedia Viewer", <br />, "w/ React"]}
-                subtitle="[Personal Project]"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="6"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/how-i-got-started-coding"
-                image={this.state.articleThreeImage}
-                class="article-default"
-                title={["How I got started coding"]}
-                date="2 Jan, 2021"
-                dateClass="article-date two-line"
-                index="4"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-3-making-the-cpu-move"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 3]"
-                date="23 Dec, 2020"
-                dateClass="article-date two-line"
-                index="2"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-1"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 1]"
-                date="December 12, 2020"
-                dateClass="article-date two-line"
-                index="0"
-              />
-            </div>
-          )}
-          {window.innerWidth <= 1009 ? (
-            <div className="right">
-              {/* All this articles belong to the estribor side in mobile screen */}
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-4"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 4]"
-                date="29 Dec, 2020"
-                dateClass="article-date two-line"
-                index="3"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-3-making-the-cpu-move"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 3]"
-                date="23 Dec, 2020"
-                dateClass="article-date two-line"
-                index="2"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-2"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 2]"
-                date="23 Dec, 2020"
-                dateClass="article-date two-line"
-                index="1"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-1"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 1]"
-                date="December 12, 2020"
-                dateClass="article-date two-line"
-                index="0"
-              />
-            </div>
-          ) : (
-            <div className="right">
-              {/* All this articles belong to the estribor side */}
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/javascript-algorithm-challenge-job-interview-challenge"
-                class="article-default"
-                image={this.state.articlefiveImage}
-                title={["JavaScript Algorithm Challenge"]}
-                subtitle="[Job Interview Challenge]"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="7"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/to-do-app-with-react-and-redux-job-interview-challenge-1"
-                class="article-default"
-                image={this.state.articleTwoImage}
-                title={["To-Do App", <br />, "w/ React & Redux"]}
-                subtitle="[Job Interview Challenge]"
-                date="5 Jan, 2021"
-                dateClass="article-date two-line"
-                index="4"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-4"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 4]"
-                date="29 Dec, 2020"
-                dateClass="article-date two-line"
-                index="3"
-              />
-              <span
-                aos=""
-                href="https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-2"
-                class="article-default"
-                image={this.state.articleOneImage}
-                title={["Football Game", <br />, "With JavaScript"]}
-                subtitle="[Part 2]"
-                date="23 Dec, 2020"
-                dateClass="article-date two-line"
-                index="1"
-              />
-            </div>
-          )}
-        </section>
+        </div>
       </div>
     );
   }

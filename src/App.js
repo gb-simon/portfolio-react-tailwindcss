@@ -1,33 +1,29 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import "./Responsive.css";
+import Main from "./Components/Main.js";
 import Projects from "./Components/Projects.js";
 import About from "./Components/About.js";
 import Articles from "./Components/Articles.js";
 import Footer from "./Components/Footer.js";
-import AOS from "aos";
 
 class App extends Component {
-  componentMount() {
-    window.scrollTo(0, 0);
-
-    const script = document.createElement("script");
-    script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
   render() {
-    AOS.init();
-
     return (
-      <BrowserRouter>
-        <Route exact path="/" component={Projects} />
-        <Route path="/articles" component={Articles} />
-        <Route path="/about" component={About} />
+      <div>
+        <Main />
+        <About />
+        <Projects />
+        <Articles />
         <Footer />
-      </BrowserRouter>
+        {/* // <Router>
+         <Route exact path="/" component={Main} />
+         <Route path="/projects" component={Projects} />
+         <Route path="/articles" component={Articles} />
+         <Route path="/contact" component={About} />
+         <Footer />
+      </Router> */}
+      </div>
     );
   }
 }
